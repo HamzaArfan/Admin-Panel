@@ -9141,6 +9141,7 @@ progress {
 }
 
 .row {
+  overflow-x: scroll;
   --bs-gutter-x: 30px;
   --bs-gutter-y: 0;
   display: flex;
@@ -23510,6 +23511,7 @@ dl li {
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
   line-height: 0;
   font-family: themify;
+  padding: 15px;
   font-size: 0.65rem;
 }
 .dataTables_wrapper .dataTable thead .sorting:before,
@@ -23519,6 +23521,7 @@ dl li {
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
   content: "\e64b";
   right: 3.2em;
+  padding: 15px;
   bottom: 13px;
 }
 .dataTables_wrapper .dataTable thead .sorting:after,
