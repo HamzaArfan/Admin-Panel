@@ -8,40 +8,9 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update User</h4> <?php
-                  include "dbcon.php";
-                  if (isset($_GET["id"])) {
-                      $user_id = $_GET["id"];
-                      $result = mysqli_query(
-                          $conn,
-                          "SELECT * FROM `USERS` WHERE `user_id` = $user_id"
-                      );
-                      $user = mysqli_fetch_assoc($result);
-                  }
-                  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                      $name = $_POST["userName"];
-                      $email = $_POST["userEmail"];
-                      $password = $_POST["userPassword"];
-                      $phone = $_POST["userPhone"];
-                      $address = $_POST["userAddress"];
-                      $city = $_POST["userCity"];
-                      $state = $_POST["userState"];
-                      $zip = $_POST["userZip"];
-                      if (
-                          mysqli_query(
-                              $conn,
-                              "UPDATE `USERS` SET `name`='$name', `email`='$email', `password`='$password', 
-                                                   `phone`='$phone', `address`='$address', `city`='$city', `state`='$state', `zip`='$zip' 
-                                                   WHERE `user_id`=$user_id"
-                          )
-                      ) {
-                          header("Location: users.php");
-                          exit();
-                      } else {
-                          echo "Error updating record: " . mysqli_error($conn);
-                      }
-                  }
-                  ?> <form class="forms-sample" action="" method="POST">
+                  <h4 class="card-title">Update User</h4> 
+                  <?php include 'php_backend\update_backend.php'; ?>
+                  <form class="forms-sample" action="" method="POST">
                     <div class="form-group">
                       <label for="userId">User ID</label>
                       <input type="text" class="form-control" name="userId" id="userId" value="<?php echo $user[

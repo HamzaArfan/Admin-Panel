@@ -3,11 +3,7 @@
 <?php include 'header.html'; ?>
   <body>
      <?php include 'nav.html'; ?>
-     <?php
-      include "dbcon.php";
-      //loading the whole table into result
-      $result = mysqli_query($conn, "SELECT * FROM `USERS`");
-      ?>
+     <?php include 'php_backend\delete_backend.php'; ?>
      <div class="row" style="margin-left: 20px;">
         <div class="col-md-12 grid-margin stretch-card">
           <div class="card">

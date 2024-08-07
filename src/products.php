@@ -3,17 +3,7 @@
 <?php include 'header.html'; ?>
 <body>
         <?php include 'nav.html'; ?>
-        <?php
-        include "dbcon.php";
-        $sql = "SELECT * FROM `products`";
-        $result = mysqli_query($conn, $sql);
-        $sql2 =
-            "SELECT * FROM products WHERE product_id IN (SELECT r1.product_id FROM reviews AS r1 JOIN reviews AS r2 ON r1.product_id = r2.product_id GROUP BY r1.product_id HAVING AVG(r2.rating) > 4)";
-        $result2 = $conn->query($sql2);
-        $sql3 =
-            "SELECT p1.category, sum(o2.total) as totalsum from  products p1 join orderitems o1 on p1.product_id = o1.product_id join  orders o2 on o1.order_id = o2.order_id group by  p1.category";
-        $result3 = $conn->query($sql3);
-        ?>
+        <?php include 'php_backend\products_backend.php'; ?>
         <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">

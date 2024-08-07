@@ -3,17 +3,7 @@
 <?php include 'header.html'; ?>
 <body>
         <?php include 'nav.html'; ?>
-        <?php
-        include "dbcon.php";
-        $sql = "SELECT * FROM `reviews`";
-        $result = mysqli_query($conn, $sql);
-        $sql2 =
-            "SELECT * from users where user_id in(SELECT user_id  from   reviews);";
-        $result2 = mysqli_query($conn, $sql2);
-        $sql3 =
-            "SELECT p1.product_id, p1.name, count(r1.review_id) as counts, avg(r1.rating) as ratin_avg from products p1 join reviews r1 on p1.product_id = r1.product_id group by  p1.product_id, p1.name order by ratin_avg desc;";
-        $result3 = mysqli_query($conn, $sql3);
-        ?>
+        <?php include 'php_backend\reviews_backend.php'; ?>
         <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
