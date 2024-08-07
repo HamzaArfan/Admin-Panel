@@ -1,136 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.html'; ?>
+<style>
+        table.table {
+            font-size: 20px;
+        }
+        table.table th, table.table td {
+            padding: 15px; 
+        }
+        table.table th {
+            white-space: nowrap;
+        }
+    </style>
 <body>
-        <?php include 'nav.html'; ?>
-        <?php include 'php_backend\reviews_backend.php'; ?>
-        <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-title mb-0">Reviews</p>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered" id="userTable">
-                                <thead>
+    <?php include 'nav.html'; ?>
+    <?php include 'php_backend/reviews_backend.php'; ?>
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-title mb-0">Reviews</p>
+                    <div class="table-responsive" style="overflow-x: scroll;">
+                        <table class="table table-striped table-bordered" id="userTable">
+                            <thead>
+                                <tr>
+                                    <th>Review id</th>
+                                    <th>U-Id</th>
+                                    <th>Product id</th>
+                                    <th>Rating</th>
+                                    <th>Comments</th>
+                                    <th>Created At</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                     <tr>
-                                        <th>Review id</th>
-                                        <th>U-Id</th>
-                                        <th>Product id</th>
-                                        <th>Rating</th>
-                                        <th>Comments</th>
-                                        <th>Created At</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php while (
-                                        $row = mysqli_fetch_assoc($result)
-                                    ) { ?>
-                                    <tr>
-                                        <td><?php echo $row[
-                                            "review_id"
-                                        ]; ?></td>
+                                        <td><?php echo $row["review_id"]; ?></td>
                                         <td><?php echo $row["user_id"]; ?></td>
-                                        <td><?php echo $row[
-                                            "product_id"
-                                        ]; ?></td>
+                                        <td><?php echo $row["product_id"]; ?></td>
                                         <td><?php echo $row["rating"]; ?></td>
                                         <td><?php echo $row["comment"]; ?></td>
-                                        <td><?php echo $row[
-                                            "created_at"
-                                        ]; ?></td>
+                                        <td><?php echo $row["created_at"]; ?></td>
                                     </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="card-title mb-0" style="margin-top:100px">Users Who Gave Product Reviews</p>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered" id="userTable1">
-                                <thead>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="card-title mb-0" style="margin-top:100px">Users Who Gave Product Reviews</p>
+                    <div class="table-responsive" style="overflow-x: scroll;">
+                        <table class="table table-striped table-bordered" id="userTable1">
+                            <thead>
                                 <tr>
-                                        <th>User id</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Password</th>
-                                        <th>Phone</th>
-                                        <th>Address</th>
-                                        <th>City</th>
-                                        <th>State</th>
-                                        <th>Zip</th>
-                                        <th>Created At</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php while (
-                                        $row3 = mysqli_fetch_assoc($result2)
-                                    ) { ?>
-                                        <tr>
+                                    <th>User id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Phone</th>
+                                    <th>Address</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Zip</th>
+                                    <th>Created At</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php while ($row3 = mysqli_fetch_assoc($result2)) { ?>
+                                    <tr>
                                         <td><?php echo $row3["user_id"]; ?></td>
                                         <td><?php echo $row3["name"]; ?></td>
                                         <td><?php echo $row3["email"]; ?></td>
-                                        <td><?php echo $row3[
-                                            "password"
-                                        ]; ?></td>
+                                        <td><?php echo $row3["password"]; ?></td>
                                         <td><?php echo $row3["phone"]; ?></td>
                                         <td><?php echo $row3["address"]; ?></td>
                                         <td><?php echo $row3["city"]; ?></td>
                                         <td><?php echo $row3["state"]; ?></td>
                                         <td><?php echo $row3["zip"]; ?></td>
-                                        <td><?php echo $row3[
-                                            "created_at"
-                                        ]; ?></td>
+                                        <td><?php echo $row3["created_at"]; ?></td>
                                     </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="card-title mb-0" style="margin-top:100px">Products With Reviews And Ratings</p>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered" id="userTable2">
-                                <thead>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="card-title mb-0" style="margin-top:100px">Products With Reviews And Ratings</p>
+                    <div class="table-responsive" style="overflow-x: scroll;">
+                        <table class="table table-striped table-bordered" id="userTable2">
+                            <thead>
                                 <tr>
-                                        <th>Product id</th>
-                                        <th>Name</th>
-                                        <th>Count</th>
-                                        <th>Rating</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php while (
-                                        $row4 = mysqli_fetch_assoc($result3)
-                                    ) { ?>
-                                        <tr>
-                                        <td><?php echo $row4[
-                                            "product_id"
-                                        ]; ?></td>
+                                    <th>Product id</th>
+                                    <th>Name</th>
+                                    <th>Count</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php while ($row4 = mysqli_fetch_assoc($result3)) { ?>
+                                    <tr>
+                                        <td><?php echo $row4["product_id"]; ?></td>
                                         <td><?php echo $row4["name"]; ?></td>
                                         <td><?php echo $row4["counts"]; ?></td>
-                                        <td><?php echo $row4[
-                                            "ratin_avg"
-                                        ]; ?></td>
+                                        <td><?php echo $row4["ratin_avg"]; ?></td>
                                     </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
+                                <?php } ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div> 
-        </div>
-        <script>
-            $(document).ready(function(){
-                //function for the jquery datatable 
-                $('#userTable').DataTable({
-                    responsive: true
-                });
-                $('#userTable1').DataTable({
-                    responsive: true
-                });
-                $('#userTable2').DataTable({
-                    responsive: true
-                });
-            });
-        </script>
+            </div>
+        </div> 
     </div>
+    <script>
+        $(document).ready(function(){
+            //function for the jquery datatable 
+            $('#userTable').DataTable({
+                responsive: true
+            });
+            $('#userTable1').DataTable({
+                responsive: true
+            });
+            $('#userTable2').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 </body>
 </html>
