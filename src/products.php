@@ -34,7 +34,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <?php while ($row = mysqli_fetch_assoc($result)) { 
+                            //Fetching results for each row in a while loop?>
                             <tr>
                                 <td><?php echo $row["product_id"]; ?></td>
                                 <td><?php echo $row["name"]; ?></td>
@@ -48,7 +49,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <p class="card-title mb-0" style="margin-top: 100px;">Products Having Avg Rating Greater Than 4</p>
                 <div class="table-responsive" style="overflow-x: scroll;">
                     <table class="table table-striped table-bordered" id="userTable2">
@@ -64,7 +64,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php while ($row2 = mysqli_fetch_assoc($result2)) { ?>
+                        <?php while ($row2 = mysqli_fetch_assoc($result2)) { 
+                            //Fetching results for each row in a while loop?>
                             <tr>
                                 <td><?php echo $row2["product_id"]; ?></td>
                                 <td><?php echo $row2["name"]; ?></td>
@@ -78,7 +79,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <p class="card-title mb-0" style="margin-top: 100px;">Total Revenue Per Product Category</p>
                 <div class="table-responsive" style="overflow-x: scroll;">
                     <table class="table table-striped table-bordered" id="userTable3">
@@ -89,7 +89,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php while ($row3 = mysqli_fetch_assoc($result3)) { ?>
+                        <?php while ($row3 = mysqli_fetch_assoc($result3)) {
+                            //Fetching results for each row in a while loop ?>
                             <tr>
                                 <td><?php echo $row3["category"]; ?></td>
                                 <td><?php echo $row3["totalsum"]; ?></td>
@@ -102,7 +103,6 @@
         </div>
     </div>
 </div>
-
 <script>
     //function for the jquery datatable 
     $(document).ready(function(){

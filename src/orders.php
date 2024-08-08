@@ -32,7 +32,8 @@
                                 </tr>
                             </thead>
                             <tbody> 
-                                <?php while ($row = mysqli_fetch_assoc($result)) { ?> 
+                                <?php while ($row = mysqli_fetch_assoc($result)) {
+                                    //Fetching results for each row in a while loop ?> 
                                     <tr>
                                         <td><?php echo $row["order_id"]; ?></td>
                                         <td><?php echo $row["user_id"]; ?></td>
@@ -43,8 +44,7 @@
                                 <?php } ?> 
                             </tbody>
                         </table>
-                    </div>
-                    
+                    </div> 
                     <h1 class="card-title mb-0" style="margin-top: 100px;">User Details With Orders Count and Amount Spent</h1>
                     <div class="table-responsive" style="overflow-x: scroll;">
                         <table class="table table-striped table-bordered" id="userTable1">
@@ -58,7 +58,8 @@
                                 </tr>
                             </thead>
                             <tbody> 
-                                <?php while ($row1 = mysqli_fetch_assoc($result1)) { ?> 
+                                <?php while ($row1 = mysqli_fetch_assoc($result1)) {
+                                    //Fetching results for each row in a while loop ?> 
                                     <tr>
                                         <td><?php echo $row1["user_id"]; ?></td>
                                         <td><?php echo $row1["name"]; ?></td>
@@ -70,7 +71,6 @@
                             </tbody>
                         </table>
                     </div>
-                    
                     <h1 class="card-title mb-0" style="margin-top: 100px;">Average Order Value For Each User</h1>
                     <div class="table-responsive" style="overflow-x: scroll;">
                         <table class="table table-striped table-bordered" id="userTable2">
@@ -82,7 +82,8 @@
                                 </tr>
                             </thead>
                             <tbody> 
-                                <?php while ($row2 = mysqli_fetch_assoc($result2)) { ?> 
+                                <?php while ($row2 = mysqli_fetch_assoc($result2)) {
+                                    //Fetching results for each row in a while loop ?> 
                                     <tr>
                                         <td><?php echo $row2["user_id"]; ?></td>
                                         <td><?php echo $row2["name"]; ?></td>
@@ -96,7 +97,6 @@
             </div>
         </div>
     </div>
-    
 </body>
 <script>
         $(document).ready(function() {

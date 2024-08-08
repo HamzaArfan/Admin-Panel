@@ -39,6 +39,9 @@
                             </thead>
                             <tbody>
                                 <?php while ($review = mysqli_fetch_assoc($result)) {
+                                     //Fetching results for each row in a while loop
+                                     //In the if statement we are checking if the user
+                                     //is deleted then dont show its results.
                                     if ($review["is_deleted"] == 0) { ?>
                                     <tr>
                                         <td><?php echo $review["user_id"]; ?></td>
@@ -69,7 +72,6 @@
                     responsive: true
                 });
             });
-
             function confirmDelete(userId) {
                 Swal.fire({
                     title: 'Are you sure?',

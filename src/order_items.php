@@ -34,7 +34,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php while ($review = mysqli_fetch_assoc($result)) { ?>
+                                <?php while ($review = mysqli_fetch_assoc($result)) { 
+                                //Fetching results for each row in a while loop
+                                ?>
                                     <tr>
                                         <td><?php echo $review["order_item_id"]; ?></td>
                                         <td><?php echo $review["order_id"]; ?></td>
@@ -70,7 +72,6 @@
             </div>
         </div>
     </div>
-    
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
     <script>

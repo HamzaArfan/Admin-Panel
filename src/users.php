@@ -37,6 +37,9 @@
                         </thead>
                         <tbody>
                         <?php while ($review = mysqli_fetch_assoc($result)) {
+                      //Fetching results for each row in a while loop
+                      //In the if statement we are checking if the user
+                      //is deleted then dont show its results.
                             if ($review["is_deleted"] == 0) { ?>
                             <tr>
                                 <td><?php echo $review["user_id"]; ?></td>
@@ -55,7 +58,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <h1 class="card-title mb-0" style="margin-top: 100px;">Users Who Haven't Placed An Order</h1>
                 <div class="table-responsive" style="overflow-x: scroll;">
                     <table class="table table-striped table-bordered" id="userTable3">
@@ -69,6 +71,9 @@
                         </thead>
                         <tbody>
                         <?php while ($review2 = mysqli_fetch_assoc($result1)) {
+                       //Fetching results for each row in a while loop
+                      //In the if statement we are checking if the user
+                      //is deleted then dont show its results.
                             if ($review2["is_deleted"] == 0) { ?>
                             <tr>
                                 <td><?php echo $review2["user_id"]; ?></td>
@@ -81,7 +86,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <h1 class="card-title mb-0" style="margin-top: 100px;">Most Recent Order For Each User</h1>
                 <div class="table-responsive" style="overflow-x: scroll;">
                     <table class="table table-striped table-bordered" id="userTable4">
@@ -94,6 +98,9 @@
                         </thead>
                         <tbody>
                         <?php while ($review3 = mysqli_fetch_assoc($result2)) {
+                      //Fetching results for each row in a while loop
+                      //In the if statement we are checking if the user
+                      //is deleted then dont show its results.
                             if ($review3["is_deleted"] == 0) { ?>
                             <tr>
                                 <td><?php echo $review3["user_id"]; ?></td>
@@ -105,7 +112,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <h1 class="card-title mb-0" style="margin-top: 100px;">Users Who Ordered More Than 1 Type Of Product</h1>
                 <div class="table-responsive" style="overflow-x: scroll;">
                     <table class="table table-striped table-bordered" id="userTable5">
@@ -117,6 +123,9 @@
                         </thead>
                         <tbody>
                         <?php while ($review4 = mysqli_fetch_assoc($result3)) {
+                      //Fetching results for each row in a while loop
+                      //In the if statement we are checking if the user
+                      //is deleted then dont show its results.
                             if ($review4["is_deleted"] == 0) { ?>
                             <tr>
                                 <td><?php echo $review4["user_id"]; ?></td>
@@ -127,12 +136,10 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </div> 
 </div>
-
 <script>
     $(document).ready(function(){
         //function for the jquery datatable 

@@ -33,7 +33,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                                <?php while ($row = mysqli_fetch_assoc($result)) {
+                                    //Fetching results for each row in a while loop ?>
                                     <tr>
                                         <td><?php echo $row["review_id"]; ?></td>
                                         <td><?php echo $row["user_id"]; ?></td>
@@ -64,7 +65,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php while ($row3 = mysqli_fetch_assoc($result2)) { ?>
+                                <?php while ($row3 = mysqli_fetch_assoc($result2)) {
+                                    //Fetching results for each row in a while loop ?>
                                     <tr>
                                         <td><?php echo $row3["user_id"]; ?></td>
                                         <td><?php echo $row3["name"]; ?></td>
@@ -93,7 +95,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php while ($row4 = mysqli_fetch_assoc($result3)) { ?>
+                                <?php while ($row4 = mysqli_fetch_assoc($result3)) {
+                                    //Fetching results for each row in a while loop ?>
                                     <tr>
                                         <td><?php echo $row4["product_id"]; ?></td>
                                         <td><?php echo $row4["name"]; ?></td>
