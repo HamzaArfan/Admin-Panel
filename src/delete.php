@@ -7,7 +7,7 @@
             font-size: 20px; 
         }
         table.table th, table.table td {
-            padding: 15px;
+            padding: 10px;
         }
         table.table th {
             white-space: nowrap; 

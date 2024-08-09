@@ -6,7 +6,7 @@
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item nav-settings d-none d-lg-flex">
-                    <button type="button" class="btn btn-primary">Logout</button>
+                    <button type="button" id="logout-button" class="btn btn-primary">Logout</button>
                 </li>
             </ul>
         </div>
@@ -14,6 +14,9 @@
     <div class="container-fluid page-body-wrapper">
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
+                <li class="nav-item" style="margin-bottom:20px;">
+                        <span class="menu-title">Welcome:<span id="username-display"></span></span>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="users.php">
                         <i class="icon-grid menu-icon"></i>
@@ -58,3 +61,18 @@
                 </li>
             </ul>
 </nav>
+<script>
+    $(document).ready(function() {
+        const username = localStorage.getItem('username');
+        if (username) {
+            $('#username-display').text(username);
+        }
+    });
+
+    $(document).ready(function(){
+        $('#logout-button').click(function(){
+            localStorage.clear('username');
+            window.location.href='login.php';
+        })
+    })
+</script>

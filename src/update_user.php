@@ -3,7 +3,7 @@
 <body>
 <?php include 'header.html';?>
 <?php include 'php_backend/update_backend.php';?>
-<script src="ajaxcalls_backend/updatesubmitajax.js"></script>
+<script src="ajaxcalls_backend/update_submit_ajax.js"></script>
 <?php include 'nav.html';?>
       <div class="main-panel">
         <div class="content-wrapper">

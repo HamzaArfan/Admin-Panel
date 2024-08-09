@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Plus+Jakarta+Sans:ital,wght@0,300;1,300&display=swap');
+
+body, html {
+    height: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.login-container {
+    width: 850px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.leftbuttons {
+
+    height: 30px;
+    width: 270px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    position: relative;
+    line-height: 1; 
+}
+
+.leftbuttons::placeholder {
+
+    font-size: smaller;
+    margin-left:-10px;
+    color: #999;
+}
+
+.leftbuttons:focus {
+    outline: none;
+    border-bottom: 1px solid #000; 
+}
+.labelleft{
+    padding-bottom: 20px;
+    margin-top: 5px;
+}
+
+.right {
+    height: 600px;
+    width: 450px;
+    background-color: #FF4A53;
+}
+
+.right img {
+    height: 600px;
+    width: 450px;
+
+}
+.heading{
+    color: #FF4A53;
+}
+
+.buttonsubmit{
+    border: none;
+    background-color: #FF4A53;
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    width: 150px;
+    font-family: "Plus Jakarta Sans", sans-serif;;
+}
+.ptext{
+    font-size: smaller;
+    margin-top: 10px;
+    font-weight: 200;
+}
+.loginclass{
+    color: #FF4A53;
+}
+@media (max-width: 768px) {
+    .login-container {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -24,6 +24,16 @@ function confirmDelete(userId) {
     })
 }
 function confirmUpdate(userId){
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor:'#3085d6' ,
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes Update It!'
+    }).then((result) => {
+        if (result.isConfirmed) {
         $.ajax({
             type:'GET',
             url:'php_backend/update_backend.php',
@@ -34,4 +44,6 @@ function confirmUpdate(userId){
                 alert("Error");
             }
         })
+    }
+})
 }

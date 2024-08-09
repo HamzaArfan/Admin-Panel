@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="ajaxcalls_backend/addajax.js"></script>
+  <script src="ajaxcalls_backend/add_ajax.js"></script>
 <?php include 'header.html'; ?>
   <body>
       <?php include 'nav.html'; ?>
