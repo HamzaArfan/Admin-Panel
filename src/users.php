@@ -6,7 +6,7 @@
             font-size: 20px;
         }
         table.table th, table.table td {
-            padding: 15px;
+            padding: 13px;
         }
         table.table th {
             white-space: nowrap;
@@ -20,7 +20,7 @@
             <div class="card-body">
                 <p class="card-title mb-0">Users</p>
                 <div class="table-responsive" style="overflow-x: scroll;">
-                    <table class="table table-striped table-bordered" id="userTable">
+                    <table class="table table-striped table-bordered " id="userTable">
                         <thead>
                             <tr>
                                 <th>Id</th>

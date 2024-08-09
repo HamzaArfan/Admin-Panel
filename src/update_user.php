@@ -1,83 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Update User</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="assets/vendors/feather/feather.css">
-    <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/select.dataTables.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
-  </head>
-  <body>
-    <!-- partial:partials/_navbar.html -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-        <a class="navbar-brand brand-logo me-5" href="index.html">
-          <img src="assets/images/logo.svg" class="me-2" alt="logo" />
-        </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img src="assets/images/logo-mini.svg" alt="logo" />
-        </a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-settings d-none d-lg-flex">
-            <button type="button" class="btn btn-primary">Logout</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="users.php">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Users</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="orders.php">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Orders</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.php">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Products</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reviews.php">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Reviews</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order_items.php">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">OrderItems</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+<body>
+<?php include 'header.html';?>
+<?php include 'php_backend/update_backend.php';?>
+<script src="ajaxcalls_backend/updatesubmitajax.js"></script>
+<?php include 'nav.html';?>
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update User</h4> <?php include 'php_backend/update_backend.php';?> <form class="forms-sample" action="" method="POST">
+                  <h4 class="card-title">Update User</h4> <form class="forms-sample" id="updateformsubmit">
                     <div class="form-group">
                       <label for="userId">User ID</label>
                       <input type="text" class="form-control" name="userId" id="userId" value="<?php echo $user['user_id']; ?>" readonly>

@@ -14,6 +14,7 @@
         }
     </style>
 </head>
+<script src="ajaxcalls_backend/update_delete_ajax.js"></script>
 <body>
     <?php include 'nav.html'; ?>
     <?php include 'php_backend\delete_backend.php'; ?>
@@ -52,7 +53,7 @@
                                         <td><?php echo $review["address"]; ?></td>
                                         <td><?php echo $review["city"]; ?></td>
                                         <td>
-                                            <a href="update_user.php?id=<?php echo $review["user_id"]; ?>" type="button" class="btn btn-success" style="color: white !important;">Update</a>
+                                            <button onclick="confirmUpdate(<?php echo $review['user_id'] ?>)" type="button" class="btn btn-success" style="color: white !important;">Update</button>
                                         </td>
                                         <td>
                                             <button onclick="confirmDelete(<?php echo $review['user_id']?>)" type="button" class="btn btn-danger" style="color: white !important;">Delete</button>
@@ -66,28 +67,13 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $('#userTable').DataTable({
-                    responsive: true
-                });
-            });
-            function confirmDelete(userId) {
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#d33',
-                    cancelButtonColor: '#3085d6',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = `delete_user.php?id=${userId}`;
-                    }
-                })
-            }
-        </script>
     </div>
 </body>
+<script>
+ $(document).ready(function() {
+$('#userTable').DataTable({
+  responsive: true
+  });
+ });
+</script>
 </html>

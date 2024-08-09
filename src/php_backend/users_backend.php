@@ -12,4 +12,4 @@
         $result3 = $conn->query(
             "SELECT o1.user_id, u1.name , u1.is_deleted from orders o1 join orderitems o2 on o1.order_id = o2.order_id join users u1 on o1.user_id = u1.user_id group by o1.user_id, u1.name having count(distinct o2.product_id) > 1"
         );
-        ?>
+?>

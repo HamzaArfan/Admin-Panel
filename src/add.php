@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="ajaxcalls_backend/addajax.js"></script>
 <?php include 'header.html'; ?>
   <body>
       <?php include 'nav.html'; ?>
@@ -10,7 +12,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Add User</h4>
-                  <form class="forms-sample" action="add_user.php" method="POST">
+                  <form class="forms-sample" id="adduserform">
                     <div class="form-group">
                       <label for="userName">Name</label>
                       <input type="text" class="form-control" name="userName" id="userName" placeholder="Name" required>
