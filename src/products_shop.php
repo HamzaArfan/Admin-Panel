@@ -16,6 +16,7 @@ include 'php_backend/products_backend.php';
         background-color:#403e92;
         border-color: #403e92;
     }
+    
     .pill-color{
         background-color: #403e92;
         color: white;

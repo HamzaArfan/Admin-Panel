@@ -21,7 +21,7 @@ if ($checkout_session->payment_status == 'paid') {
         $conn->query($query);
     }
 }
-//ending the session after the payment is complete and person is redirected back to products shoping page so that he can buy new stuff
+//ending the session after the payment is complete and person is redirected back to payment page so that he can buy
     session_unset();
     session_destroy();
     header('Location: products_shop.php');
