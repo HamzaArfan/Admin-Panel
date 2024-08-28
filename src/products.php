@@ -7,6 +7,7 @@
         }
         table.table th, table.table td {
             padding: 15px; 
+            text-align: center;
         }
         table.table th {
             white-space: nowrap; 

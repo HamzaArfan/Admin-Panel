@@ -7,12 +7,14 @@
         }
         table.table th, table.table td {
             padding: 13px;
+            text-align: center;
         }
         table.table th {
             white-space: nowrap;
         }
     </style>
 <body>
+<?php include 'nav.html'; ?>
 <?php include 'php_backend/users_backend.php'; ?>
 <div class="row">
     <div class="col-md-12 grid-margin stretch-card">

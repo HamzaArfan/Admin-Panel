@@ -9,6 +9,7 @@ $(document).ready(function(){
                 window.location.href = "users.php";
             },
             error: function(){
+                alert("ADDING FAILED");
                 window.location.href = "users.php";
             }
         });

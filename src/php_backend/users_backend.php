@@ -1,5 +1,4 @@
-<?php include 'nav.html'; ?>
-        <?php
+ <?php
         include "dbcon.php";
         $result = mysqli_query($conn, "SELECT * FROM `USERS`");
         $result1 = mysqli_query(

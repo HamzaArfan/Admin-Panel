@@ -30,7 +30,6 @@ import {
     Underline,
     Undo
 } from 'ckeditor5';
-
 const editorConfig = {
     toolbar: {
         items: [
@@ -157,7 +156,6 @@ const editorConfig = {
 	},
     placeholder: 'Type or paste your content here!'
 };
-
 ClassicEditor
     .create(document.querySelector('#editor'), editorConfig)
     .then(editor => {

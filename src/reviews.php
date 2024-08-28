@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.html'; ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
         table.table {
             font-size: 20px;
         }
         table.table th, table.table td {
             padding: 15px; 
+            text-align: center;
         }
         table.table th {
             white-space: nowrap;
@@ -25,8 +27,8 @@
                             <thead>
                                 <tr>
                                     <th>Review id</th>
-                                    <th>U-Id</th>
-                                    <th>Product id</th>
+                                    <th>User</th>
+                                    <th>Product</th>
                                     <th>Rating</th>
                                     <th>Comments</th>
                                     <th>Created At</th>
@@ -37,9 +39,15 @@
                                     //Fetching results for each row in a while loop ?>
                                     <tr>
                                         <td><?php echo $row["review_id"]; ?></td>
-                                        <td><?php echo $row["user_id"]; ?></td>
-                                        <td><?php echo $row["product_id"]; ?></td>
-                                        <td><?php echo $row["rating"]; ?></td>
+                                        <td><?php echo $row["name"]; ?></td>
+                                        <td><?php echo $row["pname"]; ?></td>
+                                        <td><?php $rating = $row["rating"];
+                                         for ($i = 1; $i <= 5; $i++) 
+                                         {
+                                         if ($i <= $rating) {
+                                            echo '<i class="fas fa-star" style="color:#4B49AC;"></i>';
+                                         }
+                                         }  ?> </td>
                                         <td><?php echo $row["comment"]; ?></td>
                                         <td><?php echo $row["created_at"]; ?></td>
                                     </tr>

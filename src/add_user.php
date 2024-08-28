@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $state =$_POST['userState'];
     $zip = $_POST['userZip'];
     echo $name , $email , $password , $phone, $address;
-    $sql = "INSERT INTO Users (name, email, password, phone, address, city, state, zip, is_deleted) VALUES ('$name', '$email', '$password', '$phone', '$address', '$city', '$state', '$zip', 0)";
+    $sql = "INSERT INTO 'users' (name, email, password, phone, address, city, state, zip, is_deleted) VALUES ('$name', '$email', '$password', '$phone', '$address', '$city', '$state', '$zip', 0)";
     if (mysqli_query($conn, $sql)) {
         echo "New user added successfully!";
     } else {

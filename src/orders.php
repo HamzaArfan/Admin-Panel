@@ -7,6 +7,7 @@
         }
         table.table th, table.table td {
             padding: 15px; 
+            text-align: center;
         }
         table.table th {
             white-space: nowrap; 
@@ -25,7 +26,7 @@
                             <thead>
                                 <tr>
                                     <th>Order id</th>
-                                    <th>U-Id</th>
+                                    <th>User-Id</th>
                                     <th>Total</th>
                                     <th>Status</th>
                                     <th>Created At</th>
@@ -50,7 +51,7 @@
                         <table class="table table-striped table-bordered" id="userTable1">
                             <thead>
                                 <tr>
-                                    <th>U-Id</th>
+                                    <th>User-Id</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Order Count</th>
@@ -76,7 +77,7 @@
                         <table class="table table-striped table-bordered" id="userTable2">
                             <thead>
                                 <tr>
-                                    <th>U-Id</th>
+                                    <th>User-Id</th>
                                     <th>Name</th>
                                     <th>totals</th>
                                 </tr>
